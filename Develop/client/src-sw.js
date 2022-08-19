@@ -38,5 +38,3 @@ registerRoute(
     ]
   })
 );
-
-// activity 19 and 20 for this file

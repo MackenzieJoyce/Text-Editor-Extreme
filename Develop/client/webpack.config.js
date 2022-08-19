@@ -20,8 +20,14 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // html - template title
-      // inject mani - swsrc swdest 
+      new HtmlWebpackPlugin({ 
+        template: './index.html', 
+        title: 'Text-Editor-Extreme'
+      }),
+      new InjectManifest({ 
+        swSrc: './src/sw.js',
+        swDest: 'service-worker.js',
+      }),
       // webpack - fingerprints inject name short name descrip background color,,,,, 
     ],
 
